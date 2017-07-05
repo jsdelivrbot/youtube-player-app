@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class SearchBar extends Component {
-  
+
   constructor(props) {
     super(props);
 
@@ -9,6 +9,10 @@ export default class SearchBar extends Component {
   }
 
   render() {
-    return <input onChange={e => console.log(e.target.value)} />
+    return (
+      <div>
+        <input onChange={e => this.setState({ term: e.target.value })} />
+      </div>
+    )
   }
 }
